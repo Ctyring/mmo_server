@@ -32,6 +32,7 @@ find_package(OpenSSL REQUIRED)
 if(OPENSSL_FOUND)
     include_directories(${OPENSSL_INCLUDE_DIR})
 endif()
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/game_project/orm)
 
 set(LIB_SRC
         game_project/my_module.cc
@@ -41,13 +42,9 @@ set(LIB_DB
     game_project/db_server/db_manager.cc
     game_project/db_server/db_module.cc
     game_project/db_server/db_handler.cc
-    game_project/define.h
 )
 
-#PROTOBUF_GENERATE_CPP(PB_SRCS PB_HDRS sylar/test.proto)
-#list(APPEND LIB_SRC ${PB_SRCS})
-#
-#message(STATUS ${LIB_SRC})
+protobufmaker(pb/message.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/game_project)
 
 add_library(game_project SHARED ${LIB_SRC})
 force_redefine_file_macro_for_sources(game_project)
@@ -87,3 +84,4 @@ set(LIBS
         jemalloc
         )
 sylar_add_executable(test_dbserver "tests/test_dbserver.cc" sylar "${LIBS}")
+

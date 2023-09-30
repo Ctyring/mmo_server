@@ -23,3 +23,6 @@
 /root/cty/game_project/build/sylar/CMakeFiles/test_bitmap.dir
 /root/cty/game_project/build/sylar/CMakeFiles/test_rock.dir
 /root/cty/game_project/build/sylar/CMakeFiles/test_email.dir
+/root/cty/game_project/build/game_project/orm/CMakeFiles/rebuild_cache.dir
+/root/cty/game_project/build/game_project/orm/CMakeFiles/edit_cache.dir
+/root/cty/game_project/build/game_project/orm/CMakeFiles/orm_data.dir

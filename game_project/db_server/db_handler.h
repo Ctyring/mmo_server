@@ -9,8 +9,8 @@ class DBHandler {
     ~DBHandler() {}
 
     static bool CheckStatus();
+    static bool HandleLog();
 
    private:
-    sylar::MySQL::ptr m_mysql = nullptr;
 };
 }  // namespace game_project

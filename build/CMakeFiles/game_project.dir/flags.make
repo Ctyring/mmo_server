@@ -10,3 +10,5 @@ CXX_INCLUDES = -I/usr/include/mysql -I/root/cty/game_project/. -I/apps/sylar/inc
 
 # Custom defines: CMakeFiles/game_project.dir/game_project/my_module.cc.o_DEFINES = __FILE__="game_project/my_module.cc"
 
+# Custom defines: CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.o_DEFINES = __FILE__="game_project/pb/message.pb.cc"
+

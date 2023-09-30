@@ -13,6 +13,7 @@ class DBManager : sylar::Noncopyable {
 
    private:
     sylar::MySQL::ptr m_mysql = nullptr;
+    sylar::MySQL::ptr m_mysql_log = nullptr;
 };
 
 typedef sylar::Singleton<DBManager> DBMgr;

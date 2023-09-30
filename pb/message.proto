@@ -1,0 +1,7 @@
+syntax = "proto2";
+package sylar.ns;
+
+message Info {
+    required int32 level = 1;
+    optional string info = 2;
+}

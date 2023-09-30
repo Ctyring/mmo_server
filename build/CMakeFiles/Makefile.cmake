@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.6/CMakeSystem.cmake"
+  "../game_project/orm/CMakeLists.txt"
   "../sylar/CMakeLists.txt"
   "../sylar/cmake/FindMySQL.cmake"
   "../sylar/cmake/utils.cmake"
@@ -57,6 +58,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "sylar/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "game_project/orm/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -82,4 +84,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "sylar/CMakeFiles/test_bitmap.dir/DependInfo.cmake"
   "sylar/CMakeFiles/test_rock.dir/DependInfo.cmake"
   "sylar/CMakeFiles/test_email.dir/DependInfo.cmake"
+  "game_project/orm/CMakeFiles/orm_data.dir/DependInfo.cmake"
   )

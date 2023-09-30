@@ -34,6 +34,7 @@ bool DBModule::handleRockNotify(sylar::RockNotify::ptr notify,
 
 bool DBModule::onLoad() {
     SYLAR_LOG_INFO(g_logger) << "onLoad";
+    DBMgr::GetInstance()->init();
     return true;
 }
 
@@ -44,12 +45,6 @@ bool DBModule::onUnload() {
 
 bool DBModule::onServerReady() {
     SYLAR_LOG_INFO(g_logger) << "onServerReady";
-    std::vector<sylar::TcpServer::ptr> svrs;
-    if (!sylar::Application::GetInstance()->getServer("rock", svrs)) {
-        SYLAR_LOG_INFO(g_logger) << "no RockServer alive";
-        return false;
-    }
-
     return true;
 }
 

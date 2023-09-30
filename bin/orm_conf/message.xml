@@ -1,0 +1,10 @@
+<table name="message" namespace="game_project.orm">
+    <columns>
+        <column name="id" type="int64" desc="唯一主键" auto_increment="true"/>
+        <column name="level" type="int32" desc="消息等级" length="11"/>
+        <column name="info" type="string" desc="具体内容" default=""/>
+    </columns>
+    <indexs>
+        <index name="pk" cols="id" type="pk" desc="主键"/>
+    </indexs>
+</table>

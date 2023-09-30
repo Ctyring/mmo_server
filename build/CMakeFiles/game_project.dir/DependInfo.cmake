@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/root/cty/game_project/game_project/my_module.cc" "/root/cty/game_project/build/CMakeFiles/game_project.dir/game_project/my_module.cc.o"
+  "/root/cty/game_project/game_project/pb/message.pb.cc" "/root/cty/game_project/build/CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

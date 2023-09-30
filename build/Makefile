@@ -389,6 +389,19 @@ test_email/fast:
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_email.dir/build.make sylar/CMakeFiles/test_email.dir/build
 .PHONY : test_email/fast
 
+#=============================================================================
+# Target rules for targets named orm_data
+
+# Build rule for target.
+orm_data: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 orm_data
+.PHONY : orm_data
+
+# fast build rule for target.
+orm_data/fast:
+	$(MAKE) $(MAKESILENT) -f game_project/orm/CMakeFiles/orm_data.dir/build.make game_project/orm/CMakeFiles/orm_data.dir/build
+.PHONY : orm_data/fast
+
 game_project/db_server/db_handler.o: game_project/db_server/db_handler.cc.o
 
 .PHONY : game_project/db_server/db_handler.o
@@ -497,6 +510,33 @@ game_project/my_module.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/game_project/my_module.cc.s
 .PHONY : game_project/my_module.cc.s
 
+game_project/pb/message.pb.o: game_project/pb/message.pb.cc.o
+
+.PHONY : game_project/pb/message.pb.o
+
+# target to build an object file
+game_project/pb/message.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.o
+.PHONY : game_project/pb/message.pb.cc.o
+
+game_project/pb/message.pb.i: game_project/pb/message.pb.cc.i
+
+.PHONY : game_project/pb/message.pb.i
+
+# target to preprocess a source file
+game_project/pb/message.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.i
+.PHONY : game_project/pb/message.pb.cc.i
+
+game_project/pb/message.pb.s: game_project/pb/message.pb.cc.s
+
+.PHONY : game_project/pb/message.pb.s
+
+# target to generate assembly for a file
+game_project/pb/message.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.s
+.PHONY : game_project/pb/message.pb.cc.s
+
 tests/test_dbserver.o: tests/test_dbserver.cc.o
 
 .PHONY : tests/test_dbserver.o
@@ -553,6 +593,7 @@ help:
 	@echo "... test_bitmap"
 	@echo "... test_rock"
 	@echo "... test_email"
+	@echo "... orm_data"
 	@echo "... game_project/db_server/db_handler.o"
 	@echo "... game_project/db_server/db_handler.i"
 	@echo "... game_project/db_server/db_handler.s"
@@ -565,6 +606,9 @@ help:
 	@echo "... game_project/my_module.o"
 	@echo "... game_project/my_module.i"
 	@echo "... game_project/my_module.s"
+	@echo "... game_project/pb/message.pb.o"
+	@echo "... game_project/pb/message.pb.i"
+	@echo "... game_project/pb/message.pb.s"
 	@echo "... tests/test_dbserver.o"
 	@echo "... tests/test_dbserver.i"
 	@echo "... tests/test_dbserver.s"
