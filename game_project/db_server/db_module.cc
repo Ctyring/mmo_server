@@ -20,7 +20,7 @@ bool DBModule::handleRockRequest(sylar::RockRequest::ptr request,
     switch (request->getCmd()) {
         case (int)Command::TICK:
             return DBHandlerMgr::GetInstance()->CheckStatus();
-        case (int)Command::LOG_MESSAGE:
+        case (int)Command::DB_MESSAGE:
             return DBHandlerMgr::GetInstance()->SaveMessage(request, response,
                                                             stream);
         default:
