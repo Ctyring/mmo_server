@@ -35,6 +35,11 @@ set(LIB_SRC
         game_project/my_module.cc
     )
 
+set(LIB_DB
+    game_project/db_server/db_manager.cc
+    game_project/db_server/db_module.cc
+)
+
 #PROTOBUF_GENERATE_CPP(PB_SRCS PB_HDRS sylar/test.proto)
 #list(APPEND LIB_SRC ${PB_SRCS})
 #
@@ -42,6 +47,9 @@ set(LIB_SRC
 
 add_library(game_project SHARED ${LIB_SRC})
 force_redefine_file_macro_for_sources(game_project)
+
+add_library(db_server SHARED ${LIB_DB})
+force_redefine_file_macro_for_sources(db_server)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

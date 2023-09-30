@@ -6,7 +6,9 @@ then
 else
     unlink bin/game_project
     unlink bin/module/libgame_project.so
+    unlink bin/module/libdb_server.so
 fi
 
 cp sylar/bin/sylar bin/game_project
 cp lib/libgame_project.so bin/module/
+cp lib/libdb_server.so bin/module/

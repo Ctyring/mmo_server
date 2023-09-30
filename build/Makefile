@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named db_server
+
+# Build rule for target.
+db_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 db_server
+.PHONY : db_server
+
+# fast build rule for target.
+db_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/build
+.PHONY : db_server/fast
+
+#=============================================================================
 # Target rules for targets named game_project
 
 # Build rule for target.
@@ -363,6 +376,60 @@ test_email/fast:
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_email.dir/build.make sylar/CMakeFiles/test_email.dir/build
 .PHONY : test_email/fast
 
+game_project/db_server/db_manager.o: game_project/db_server/db_manager.cc.o
+
+.PHONY : game_project/db_server/db_manager.o
+
+# target to build an object file
+game_project/db_server/db_manager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o
+.PHONY : game_project/db_server/db_manager.cc.o
+
+game_project/db_server/db_manager.i: game_project/db_server/db_manager.cc.i
+
+.PHONY : game_project/db_server/db_manager.i
+
+# target to preprocess a source file
+game_project/db_server/db_manager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.i
+.PHONY : game_project/db_server/db_manager.cc.i
+
+game_project/db_server/db_manager.s: game_project/db_server/db_manager.cc.s
+
+.PHONY : game_project/db_server/db_manager.s
+
+# target to generate assembly for a file
+game_project/db_server/db_manager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.s
+.PHONY : game_project/db_server/db_manager.cc.s
+
+game_project/db_server/db_module.o: game_project/db_server/db_module.cc.o
+
+.PHONY : game_project/db_server/db_module.o
+
+# target to build an object file
+game_project/db_server/db_module.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o
+.PHONY : game_project/db_server/db_module.cc.o
+
+game_project/db_server/db_module.i: game_project/db_server/db_module.cc.i
+
+.PHONY : game_project/db_server/db_module.i
+
+# target to preprocess a source file
+game_project/db_server/db_module.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.i
+.PHONY : game_project/db_server/db_module.cc.i
+
+game_project/db_server/db_module.s: game_project/db_server/db_module.cc.s
+
+.PHONY : game_project/db_server/db_module.s
+
+# target to generate assembly for a file
+game_project/db_server/db_module.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.s
+.PHONY : game_project/db_server/db_module.cc.s
+
 game_project/my_module.o: game_project/my_module.cc.o
 
 .PHONY : game_project/my_module.o
@@ -398,6 +465,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... db_server"
 	@echo "... game_project"
 	@echo "... bin_sylar"
 	@echo "... orm"
@@ -417,6 +485,12 @@ help:
 	@echo "... test_bitmap"
 	@echo "... test_rock"
 	@echo "... test_email"
+	@echo "... game_project/db_server/db_manager.o"
+	@echo "... game_project/db_server/db_manager.i"
+	@echo "... game_project/db_server/db_manager.s"
+	@echo "... game_project/db_server/db_module.o"
+	@echo "... game_project/db_server/db_module.i"
+	@echo "... game_project/db_server/db_module.s"
 	@echo "... game_project/my_module.o"
 	@echo "... game_project/my_module.i"
 	@echo "... game_project/my_module.s"
