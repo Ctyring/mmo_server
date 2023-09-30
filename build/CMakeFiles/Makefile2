@@ -59,8 +59,10 @@ CMAKE_BINARY_DIR = /root/cty/game_project/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/test_logserver.dir/all
 all: CMakeFiles/game_project.dir/all
 all: CMakeFiles/db_server.dir/all
+all: CMakeFiles/log_server.dir/all
 all: CMakeFiles/test_dbserver.dir/all
 all: sylar/all
 all: game_project/orm/all
@@ -74,8 +76,10 @@ preinstall: game_project/orm/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/test_logserver.dir/clean
 clean: CMakeFiles/game_project.dir/clean
 clean: CMakeFiles/db_server.dir/clean
+clean: CMakeFiles/log_server.dir/clean
 clean: CMakeFiles/test_dbserver.dir/clean
 clean: sylar/clean
 clean: game_project/orm/clean
@@ -153,13 +157,40 @@ sylar/clean: sylar/CMakeFiles/test_email.dir/clean
 .PHONY : sylar/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/test_logserver.dir
+
+# All Build rule for target.
+CMakeFiles/test_logserver.dir/all: sylar/CMakeFiles/sylar.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logserver.dir/build.make CMakeFiles/test_logserver.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logserver.dir/build.make CMakeFiles/test_logserver.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=87 "Built target test_logserver"
+.PHONY : CMakeFiles/test_logserver.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_logserver.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 55
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_logserver.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_logserver.dir/rule
+
+# Convenience name for target.
+test_logserver: CMakeFiles/test_logserver.dir/rule
+
+.PHONY : test_logserver
+
+# clean rule for target.
+CMakeFiles/test_logserver.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logserver.dir/build.make CMakeFiles/test_logserver.dir/clean
+.PHONY : CMakeFiles/test_logserver.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/game_project.dir
 
 # All Build rule for target.
 CMakeFiles/game_project.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=6,7,8 "Built target game_project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=7,8,9 "Built target game_project"
 .PHONY : CMakeFiles/game_project.dir/all
 
 # Build rule for subdir invocation for target.
@@ -186,12 +217,12 @@ CMakeFiles/game_project.dir/clean:
 CMakeFiles/db_server.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=2,3,4,5 "Built target db_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=2,3,4,5,6 "Built target db_server"
 .PHONY : CMakeFiles/db_server.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/db_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/db_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : CMakeFiles/db_server.dir/rule
@@ -207,18 +238,45 @@ CMakeFiles/db_server.dir/clean:
 .PHONY : CMakeFiles/db_server.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/log_server.dir
+
+# All Build rule for target.
+CMakeFiles/log_server.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=10,11,12,13 "Built target log_server"
+.PHONY : CMakeFiles/log_server.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/log_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/log_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
+.PHONY : CMakeFiles/log_server.dir/rule
+
+# Convenience name for target.
+log_server: CMakeFiles/log_server.dir/rule
+
+.PHONY : log_server
+
+# clean rule for target.
+CMakeFiles/log_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/clean
+.PHONY : CMakeFiles/log_server.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test_dbserver.dir
 
 # All Build rule for target.
 CMakeFiles/test_dbserver.dir/all: sylar/CMakeFiles/sylar.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_dbserver.dir/build.make CMakeFiles/test_dbserver.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_dbserver.dir/build.make CMakeFiles/test_dbserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=79,80 "Built target test_dbserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=79 "Built target test_dbserver"
 .PHONY : CMakeFiles/test_dbserver.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_dbserver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_dbserver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_dbserver.dir/rule
@@ -245,7 +303,7 @@ sylar/CMakeFiles/bin_sylar.dir/all: sylar/CMakeFiles/sylar.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/bin_sylar.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 59
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/bin_sylar.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/bin_sylar.dir/rule
@@ -267,12 +325,12 @@ sylar/CMakeFiles/bin_sylar.dir/clean:
 sylar/CMakeFiles/orm.dir/all: sylar/CMakeFiles/sylar.dir/all
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/orm.dir/build.make sylar/CMakeFiles/orm.dir/depend
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/orm.dir/build.make sylar/CMakeFiles/orm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=9,10,11,12,13 "Built target orm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=14,15,16,17 "Built target orm"
 .PHONY : sylar/CMakeFiles/orm.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/orm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 58
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/orm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/orm.dir/rule
@@ -294,12 +352,12 @@ sylar/CMakeFiles/orm.dir/clean:
 sylar/CMakeFiles/test_mysql.dir/all: sylar/CMakeFiles/sylar.dir/all
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_mysql.dir/build.make sylar/CMakeFiles/test_mysql.dir/depend
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_mysql.dir/build.make sylar/CMakeFiles/test_mysql.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=89,90 "Built target test_mysql"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=90 "Built target test_mysql"
 .PHONY : sylar/CMakeFiles/test_mysql.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_mysql.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_mysql.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_mysql.dir/rule
@@ -321,12 +379,12 @@ sylar/CMakeFiles/test_mysql.dir/clean:
 sylar/CMakeFiles/test_hashmultimap.dir/all: sylar/CMakeFiles/sylar.dir/all
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_hashmultimap.dir/build.make sylar/CMakeFiles/test_hashmultimap.dir/depend
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_hashmultimap.dir/build.make sylar/CMakeFiles/test_hashmultimap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=86 "Built target test_hashmultimap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=85,86 "Built target test_hashmultimap"
 .PHONY : sylar/CMakeFiles/test_hashmultimap.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_hashmultimap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 59
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_hashmultimap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_hashmultimap.dir/rule
@@ -348,12 +406,12 @@ sylar/CMakeFiles/test_hashmultimap.dir/clean:
 sylar/CMakeFiles/test_hashmap.dir/all: sylar/CMakeFiles/sylar.dir/all
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_hashmap.dir/build.make sylar/CMakeFiles/test_hashmap.dir/depend
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_hashmap.dir/build.make sylar/CMakeFiles/test_hashmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=84,85 "Built target test_hashmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=83,84 "Built target test_hashmap"
 .PHONY : sylar/CMakeFiles/test_hashmap.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_hashmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_hashmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_hashmap.dir/rule
@@ -380,7 +438,7 @@ sylar/CMakeFiles/test_util.dir/all: sylar/CMakeFiles/sylar.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_util.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_util.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_util.dir/rule
@@ -407,7 +465,7 @@ sylar/CMakeFiles/test_zkclient.dir/all: sylar/CMakeFiles/sylar.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_zkclient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_zkclient.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_zkclient.dir/rule
@@ -434,7 +492,7 @@ sylar/CMakeFiles/test_array.dir/all: sylar/CMakeFiles/sylar.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_array.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_array.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_array.dir/rule
@@ -461,7 +519,7 @@ sylar/CMakeFiles/test_service_discovery.dir/all: sylar/CMakeFiles/sylar.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_service_discovery.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_service_discovery.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_service_discovery.dir/rule
@@ -483,12 +541,12 @@ sylar/CMakeFiles/test_service_discovery.dir/clean:
 sylar/CMakeFiles/sylar.dir/all:
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/sylar.dir/build.make sylar/CMakeFiles/sylar.dir/depend
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/sylar.dir/build.make sylar/CMakeFiles/sylar.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73 "Built target sylar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73 "Built target sylar"
 .PHONY : sylar/CMakeFiles/sylar.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/sylar.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 58
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 54
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/sylar.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/sylar.dir/rule
@@ -510,12 +568,12 @@ sylar/CMakeFiles/sylar.dir/clean:
 sylar/CMakeFiles/test_nameserver.dir/all: sylar/CMakeFiles/sylar.dir/all
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_nameserver.dir/build.make sylar/CMakeFiles/test_nameserver.dir/depend
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_nameserver.dir/build.make sylar/CMakeFiles/test_nameserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=91 "Built target test_nameserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=91,92 "Built target test_nameserver"
 .PHONY : sylar/CMakeFiles/test_nameserver.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_nameserver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 59
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_nameserver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_nameserver.dir/rule
@@ -537,12 +595,12 @@ sylar/CMakeFiles/test_nameserver.dir/clean:
 sylar/CMakeFiles/test_dict.dir/all: sylar/CMakeFiles/sylar.dir/all
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_dict.dir/build.make sylar/CMakeFiles/test_dict.dir/depend
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_dict.dir/build.make sylar/CMakeFiles/test_dict.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=81 "Built target test_dict"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=80,81 "Built target test_dict"
 .PHONY : sylar/CMakeFiles/test_dict.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_dict.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 59
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_dict.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_dict.dir/rule
@@ -564,7 +622,7 @@ sylar/CMakeFiles/test_dict.dir/clean:
 sylar/CMakeFiles/test_module.dir/all:
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_module.dir/build.make sylar/CMakeFiles/test_module.dir/depend
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_module.dir/build.make sylar/CMakeFiles/test_module.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=87,88 "Built target test_module"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=88,89 "Built target test_module"
 .PHONY : sylar/CMakeFiles/test_module.dir/all
 
 # Build rule for subdir invocation for target.
@@ -596,7 +654,7 @@ sylar/CMakeFiles/test_crypto.dir/all: sylar/CMakeFiles/sylar.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_crypto.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_crypto.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_crypto.dir/rule
@@ -623,7 +681,7 @@ sylar/CMakeFiles/test_sqlite3.dir/all: sylar/CMakeFiles/sylar.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_sqlite3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 59
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_sqlite3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_sqlite3.dir/rule
@@ -650,7 +708,7 @@ sylar/CMakeFiles/test_bitmap.dir/all: sylar/CMakeFiles/sylar.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_bitmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 59
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_bitmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_bitmap.dir/rule
@@ -672,12 +730,12 @@ sylar/CMakeFiles/test_bitmap.dir/clean:
 sylar/CMakeFiles/test_rock.dir/all: sylar/CMakeFiles/sylar.dir/all
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_rock.dir/build.make sylar/CMakeFiles/test_rock.dir/depend
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_rock.dir/build.make sylar/CMakeFiles/test_rock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=92,93 "Built target test_rock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=93 "Built target test_rock"
 .PHONY : sylar/CMakeFiles/test_rock.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_rock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_rock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_rock.dir/rule
@@ -699,12 +757,12 @@ sylar/CMakeFiles/test_rock.dir/clean:
 sylar/CMakeFiles/test_email.dir/all: sylar/CMakeFiles/sylar.dir/all
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_email.dir/build.make sylar/CMakeFiles/test_email.dir/depend
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_email.dir/build.make sylar/CMakeFiles/test_email.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=82,83 "Built target test_email"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=82 "Built target test_email"
 .PHONY : sylar/CMakeFiles/test_email.dir/all
 
 # Build rule for subdir invocation for target.
 sylar/CMakeFiles/test_email.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar/CMakeFiles/test_email.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/game_project/build/CMakeFiles 0
 .PHONY : sylar/CMakeFiles/test_email.dir/rule
@@ -726,7 +784,7 @@ sylar/CMakeFiles/test_email.dir/clean:
 game_project/orm/CMakeFiles/orm_data.dir/all:
 	$(MAKE) $(MAKESILENT) -f game_project/orm/CMakeFiles/orm_data.dir/build.make game_project/orm/CMakeFiles/orm_data.dir/depend
 	$(MAKE) $(MAKESILENT) -f game_project/orm/CMakeFiles/orm_data.dir/build.make game_project/orm/CMakeFiles/orm_data.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=14,15 "Built target orm_data"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=18,19 "Built target orm_data"
 .PHONY : game_project/orm/CMakeFiles/orm_data.dir/all
 
 # Build rule for subdir invocation for target.

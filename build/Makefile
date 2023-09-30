@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_logserver
+
+# Build rule for target.
+test_logserver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_logserver
+.PHONY : test_logserver
+
+# fast build rule for target.
+test_logserver/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logserver.dir/build.make CMakeFiles/test_logserver.dir/build
+.PHONY : test_logserver/fast
+
+#=============================================================================
 # Target rules for targets named game_project
 
 # Build rule for target.
@@ -141,6 +154,19 @@ db_server: cmake_check_build_system
 db_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/build
 .PHONY : db_server/fast
+
+#=============================================================================
+# Target rules for targets named log_server
+
+# Build rule for target.
+log_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 log_server
+.PHONY : log_server
+
+# fast build rule for target.
+log_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/build
+.PHONY : log_server/fast
 
 #=============================================================================
 # Target rules for targets named test_dbserver
@@ -483,6 +509,60 @@ game_project/db_server/db_module.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.s
 .PHONY : game_project/db_server/db_module.cc.s
 
+game_project/log_server/log_handler.o: game_project/log_server/log_handler.cc.o
+
+.PHONY : game_project/log_server/log_handler.o
+
+# target to build an object file
+game_project/log_server/log_handler.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/game_project/log_server/log_handler.cc.o
+.PHONY : game_project/log_server/log_handler.cc.o
+
+game_project/log_server/log_handler.i: game_project/log_server/log_handler.cc.i
+
+.PHONY : game_project/log_server/log_handler.i
+
+# target to preprocess a source file
+game_project/log_server/log_handler.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/game_project/log_server/log_handler.cc.i
+.PHONY : game_project/log_server/log_handler.cc.i
+
+game_project/log_server/log_handler.s: game_project/log_server/log_handler.cc.s
+
+.PHONY : game_project/log_server/log_handler.s
+
+# target to generate assembly for a file
+game_project/log_server/log_handler.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/game_project/log_server/log_handler.cc.s
+.PHONY : game_project/log_server/log_handler.cc.s
+
+game_project/log_server/log_module.o: game_project/log_server/log_module.cc.o
+
+.PHONY : game_project/log_server/log_module.o
+
+# target to build an object file
+game_project/log_server/log_module.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/game_project/log_server/log_module.cc.o
+.PHONY : game_project/log_server/log_module.cc.o
+
+game_project/log_server/log_module.i: game_project/log_server/log_module.cc.i
+
+.PHONY : game_project/log_server/log_module.i
+
+# target to preprocess a source file
+game_project/log_server/log_module.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/game_project/log_server/log_module.cc.i
+.PHONY : game_project/log_server/log_module.cc.i
+
+game_project/log_server/log_module.s: game_project/log_server/log_module.cc.s
+
+.PHONY : game_project/log_server/log_module.s
+
+# target to generate assembly for a file
+game_project/log_server/log_module.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/game_project/log_server/log_module.cc.s
+.PHONY : game_project/log_server/log_module.cc.s
+
 game_project/my_module.o: game_project/my_module.cc.o
 
 .PHONY : game_project/my_module.o
@@ -517,6 +597,8 @@ game_project/pb/message.pb.o: game_project/pb/message.pb.cc.o
 # target to build an object file
 game_project/pb/message.pb.cc.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/game_project/pb/message.pb.cc.o
 .PHONY : game_project/pb/message.pb.cc.o
 
 game_project/pb/message.pb.i: game_project/pb/message.pb.cc.i
@@ -526,6 +608,8 @@ game_project/pb/message.pb.i: game_project/pb/message.pb.cc.i
 # target to preprocess a source file
 game_project/pb/message.pb.cc.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/game_project/pb/message.pb.cc.i
 .PHONY : game_project/pb/message.pb.cc.i
 
 game_project/pb/message.pb.s: game_project/pb/message.pb.cc.s
@@ -535,6 +619,8 @@ game_project/pb/message.pb.s: game_project/pb/message.pb.cc.s
 # target to generate assembly for a file
 game_project/pb/message.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/game_project/pb/message.pb.cc.s
 .PHONY : game_project/pb/message.pb.cc.s
 
 tests/test_dbserver.o: tests/test_dbserver.cc.o
@@ -564,6 +650,33 @@ tests/test_dbserver.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_dbserver.dir/build.make CMakeFiles/test_dbserver.dir/tests/test_dbserver.cc.s
 .PHONY : tests/test_dbserver.cc.s
 
+tests/test_logserver.o: tests/test_logserver.cc.o
+
+.PHONY : tests/test_logserver.o
+
+# target to build an object file
+tests/test_logserver.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logserver.dir/build.make CMakeFiles/test_logserver.dir/tests/test_logserver.cc.o
+.PHONY : tests/test_logserver.cc.o
+
+tests/test_logserver.i: tests/test_logserver.cc.i
+
+.PHONY : tests/test_logserver.i
+
+# target to preprocess a source file
+tests/test_logserver.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logserver.dir/build.make CMakeFiles/test_logserver.dir/tests/test_logserver.cc.i
+.PHONY : tests/test_logserver.cc.i
+
+tests/test_logserver.s: tests/test_logserver.cc.s
+
+.PHONY : tests/test_logserver.s
+
+# target to generate assembly for a file
+tests/test_logserver.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logserver.dir/build.make CMakeFiles/test_logserver.dir/tests/test_logserver.cc.s
+.PHONY : tests/test_logserver.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -571,10 +684,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... test_logserver"
 	@echo "... game_project"
 	@echo "... db_server"
+	@echo "... log_server"
 	@echo "... test_dbserver"
-	@echo "... edit_cache"
 	@echo "... bin_sylar"
 	@echo "... orm"
 	@echo "... test_mysql"
@@ -603,6 +718,12 @@ help:
 	@echo "... game_project/db_server/db_module.o"
 	@echo "... game_project/db_server/db_module.i"
 	@echo "... game_project/db_server/db_module.s"
+	@echo "... game_project/log_server/log_handler.o"
+	@echo "... game_project/log_server/log_handler.i"
+	@echo "... game_project/log_server/log_handler.s"
+	@echo "... game_project/log_server/log_module.o"
+	@echo "... game_project/log_server/log_module.i"
+	@echo "... game_project/log_server/log_module.s"
 	@echo "... game_project/my_module.o"
 	@echo "... game_project/my_module.i"
 	@echo "... game_project/my_module.s"
@@ -612,6 +733,9 @@ help:
 	@echo "... tests/test_dbserver.o"
 	@echo "... tests/test_dbserver.i"
 	@echo "... tests/test_dbserver.s"
+	@echo "... tests/test_logserver.o"
+	@echo "... tests/test_logserver.i"
+	@echo "... tests/test_logserver.s"
 .PHONY : help
 
 

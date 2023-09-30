@@ -1,11 +1,12 @@
 #include "db_handler.h"
 #include "db_manager.h"
 #include "db_moudle.h"
-#include "db_protocol.h"
+#include "protocol_def/protocol.h"
 #include "sylar/application.h"
 #include "sylar/config.h"
 #include "sylar/log.h"
 #include "sylar/rock/rock_server.h"
+#include "sylar/tcp_server.h"
 
 namespace game_project {
 
@@ -17,8 +18,11 @@ bool DBModule::handleRockRequest(sylar::RockRequest::ptr request,
                                  sylar::RockResponse::ptr response,
                                  sylar::RockStream::ptr stream) {
     switch (request->getCmd()) {
-        case (int)DBCommand::DEBUG:
-            return DBHandler::CheckStatus();
+        case (int)Command::TICK:
+            return DBHandlerMgr::GetInstance()->CheckStatus();
+        case (int)Command::LOG_MESSAGE:
+            return DBHandlerMgr::GetInstance()->SaveMessage(request, response,
+                                                            stream);
         default:
             SYLAR_LOG_WARN(g_logger)
                 << "invalid cmd=0x" << std::hex << request->getCmd();

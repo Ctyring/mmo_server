@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/root/cty/game_project/game_project/db_server/db_handler.cc" "/root/cty/game_project/build/CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o"
   "/root/cty/game_project/game_project/db_server/db_manager.cc" "/root/cty/game_project/build/CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o"
   "/root/cty/game_project/game_project/db_server/db_module.cc" "/root/cty/game_project/build/CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o"
+  "/root/cty/game_project/game_project/pb/message.pb.cc" "/root/cty/game_project/build/CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

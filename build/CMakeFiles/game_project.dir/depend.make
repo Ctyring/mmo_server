@@ -31,6 +31,6 @@ CMakeFiles/game_project.dir/game_project/my_module.cc.o: ../sylar/sylar/zk_clien
 CMakeFiles/game_project.dir/game_project/my_module.cc.o: ../game_project/my_module.cc
 CMakeFiles/game_project.dir/game_project/my_module.cc.o: ../game_project/my_module.h
 
-CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.o: ../game_project/pb/message.pb.h
 CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.o: ../game_project/pb/message.pb.cc
+CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.o: ../game_project/pb/message.pb.h
 

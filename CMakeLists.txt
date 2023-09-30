@@ -34,27 +34,6 @@ if(OPENSSL_FOUND)
 endif()
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/game_project/orm)
 
-set(LIB_SRC
-        game_project/my_module.cc
-    )
-
-set(LIB_DB
-    game_project/db_server/db_manager.cc
-    game_project/db_server/db_module.cc
-    game_project/db_server/db_handler.cc
-)
-
-protobufmaker(pb/message.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/game_project)
-
-add_library(game_project SHARED ${LIB_SRC})
-force_redefine_file_macro_for_sources(game_project)
-
-add_library(db_server SHARED ${LIB_DB})
-force_redefine_file_macro_for_sources(db_server)
-
-SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
-SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
-
 find_package(Protobuf)
 if(Protobuf_FOUND)
     include_directories(${Protobuf_INCLUDE_DIRS})
@@ -65,7 +44,41 @@ if(ZLIB_FOUND)
     include_directories(${ZLIB_INCLUDE_DIR})
 endif()
 
+set (LIB_PB)
+protobufmaker(pb/message.proto LIB_PB ${CMAKE_CURRENT_SOURCE_DIR}/game_project)
+set(LIB_SRC
+        game_project/my_module.cc
+        ${LIB_PB}
+    )
+
+set(LIB_DB
+    game_project/db_server/db_manager.cc
+    game_project/db_server/db_module.cc
+    game_project/db_server/db_handler.cc
+    ${LIB_PB}
+)
+
+set(LIB_LOG
+    game_project/log_server/log_handler.cc
+    game_project/log_server/log_module.cc
+    ${LIB_PB}
+)
+
+
+add_library(game_project SHARED ${LIB_SRC})
+force_redefine_file_macro_for_sources(game_project)
+
+add_library(db_server SHARED ${LIB_DB})
+force_redefine_file_macro_for_sources(db_server)
+
+add_library(log_server SHARED ${LIB_LOG})
+force_redefine_file_macro_for_sources(log_server)
+
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+
 include_directories(sylar/bin)
+
 set(LIBS
         sylar
         dl
@@ -82,6 +95,7 @@ set(LIBS
         sqlite3
         tinyxml2
         jemalloc
-        )
+        ${LIB_PB}       
+    )
 sylar_add_executable(test_dbserver "tests/test_dbserver.cc" sylar "${LIBS}")
-
+sylar_add_executable(test_logserver "tests/test_logserver.cc" sylar "${LIBS}")

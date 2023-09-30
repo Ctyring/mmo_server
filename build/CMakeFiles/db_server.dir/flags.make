@@ -14,3 +14,5 @@ CXX_INCLUDES = -I/usr/include/mysql -I/root/cty/game_project/. -I/apps/sylar/inc
 
 # Custom defines: CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o_DEFINES = __FILE__="game_project/db_server/db_handler.cc"
 
+# Custom defines: CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.o_DEFINES = __FILE__="game_project/pb/message.pb.cc";__FILE__="game_project/pb/message.pb.cc";__FILE__="game_project/pb/message.pb.cc"
+

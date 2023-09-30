@@ -63,9 +63,13 @@ include CMakeFiles/db_server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/db_server.dir/flags.make
 
+../game_project/pb/message.pb.cc: ../pb/message.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../game_project/pb/message.pb.cc"
+	protoc --cpp_out=/root/cty/game_project/game_project -I/root/cty/game_project /root/cty/game_project/pb/message.proto
+
 CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o: CMakeFiles/db_server.dir/flags.make
 CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o: ../game_project/db_server/db_manager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o"
 	/opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) -D__FILE__=\"game_project/db_server/db_manager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o -c /root/cty/game_project/game_project/db_server/db_manager.cc
 
 CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.i: cmake_force
@@ -78,7 +82,7 @@ CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.s: cmake_force
 
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: CMakeFiles/db_server.dir/flags.make
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../game_project/db_server/db_module.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o"
 	/opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) -D__FILE__=\"game_project/db_server/db_module.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o -c /root/cty/game_project/game_project/db_server/db_module.cc
 
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.i: cmake_force
@@ -91,7 +95,7 @@ CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.s: cmake_force
 
 CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o: CMakeFiles/db_server.dir/flags.make
 CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o: ../game_project/db_server/db_handler.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o"
 	/opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) -D__FILE__=\"game_project/db_server/db_handler.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o -c /root/cty/game_project/game_project/db_server/db_handler.cc
 
 CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.i: cmake_force
@@ -102,11 +106,25 @@ CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.s"
 	/opt/rh/devtoolset-9/root/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"game_project/db_server/db_handler.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/cty/game_project/game_project/db_server/db_handler.cc -o CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.s
 
+CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.o: CMakeFiles/db_server.dir/flags.make
+CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.o: ../game_project/pb/message.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.o"
+	/opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) -D__FILE__=\"game_project/pb/message.pb.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.o -c /root/cty/game_project/game_project/pb/message.pb.cc
+
+CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.i"
+	/opt/rh/devtoolset-9/root/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"game_project/pb/message.pb.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/cty/game_project/game_project/pb/message.pb.cc > CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.i
+
+CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.s"
+	/opt/rh/devtoolset-9/root/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"game_project/pb/message.pb.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/cty/game_project/game_project/pb/message.pb.cc -o CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.s
+
 # Object files for target db_server
 db_server_OBJECTS = \
 "CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o" \
 "CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o" \
-"CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o"
+"CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o" \
+"CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.o"
 
 # External object files for target db_server
 db_server_EXTERNAL_OBJECTS =
@@ -114,9 +132,10 @@ db_server_EXTERNAL_OBJECTS =
 ../lib/libdb_server.so: CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o
 ../lib/libdb_server.so: CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o
 ../lib/libdb_server.so: CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o
+../lib/libdb_server.so: CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.o
 ../lib/libdb_server.so: CMakeFiles/db_server.dir/build.make
 ../lib/libdb_server.so: CMakeFiles/db_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library ../lib/libdb_server.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/cty/game_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library ../lib/libdb_server.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/db_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,7 +147,7 @@ CMakeFiles/db_server.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/db_server.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/db_server.dir/clean
 
-CMakeFiles/db_server.dir/depend:
+CMakeFiles/db_server.dir/depend: ../game_project/pb/message.pb.cc
 	cd /root/cty/game_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/cty/game_project /root/cty/game_project /root/cty/game_project/build /root/cty/game_project/build /root/cty/game_project/build/CMakeFiles/db_server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/db_server.dir/depend
 

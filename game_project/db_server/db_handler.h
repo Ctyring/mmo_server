@@ -8,9 +8,13 @@ class DBHandler {
     DBHandler() {}
     ~DBHandler() {}
 
-    static bool CheckStatus();
-    static bool HandleLog();
+    bool CheckStatus();
+    bool SaveMessage(sylar::RockRequest::ptr request,
+                     sylar::RockResponse::ptr response,
+                     sylar::RockStream::ptr stream);
 
    private:
 };
+
+typedef sylar::Singleton<DBHandler> DBHandlerMgr;
 }  // namespace game_project

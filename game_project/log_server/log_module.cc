@@ -1,7 +1,7 @@
 #include "log_handler.h"
 #include "log_moudle.h"
-#include "log_protocol.h"
 #include "pb/message.pb.h"
+#include "protocol_def/protocol.h"
 #include "sylar/application.h"
 #include "sylar/config.h"
 #include "sylar/log.h"
@@ -16,8 +16,9 @@ bool LogModule::handleRockRequest(sylar::RockRequest::ptr request,
                                   sylar::RockResponse::ptr response,
                                   sylar::RockStream::ptr stream) {
     switch (request->getCmd()) {
-        case (int)LogCommand::MESSAGE:
-            return LogHandler::HandlerMessage(request, response, stream);
+        case (int)Command::LOG_MESSAGE:
+            return LogHandlerMgr::GetInstance()->HandleMessage(
+                request, response, stream);
         default:
             SYLAR_LOG_WARN(g_logger)
                 << "invalid cmd=0x" << std::hex << request->getCmd();
@@ -33,6 +34,7 @@ bool LogModule::handleRockNotify(sylar::RockNotify::ptr notify,
 
 bool LogModule::onLoad() {
     // SYLAR_LOG_INFO(g_logger) << "onLoad";
+    LogHandlerMgr::GetInstance()->init();
     return true;
 }
 

@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-#include "game_project/db_server/db_protocol.h"
+#include "protocol_def/protocol.h"
 #include "sylar/iomanager.h"
 #include "sylar/log.h"
 #include "sylar/rock/rock_stream.h"
@@ -10,7 +10,7 @@ void run() {
     conn->connect(addr);
     conn->start();
     sylar::RockRequest::ptr req(new sylar::RockRequest);
-    req->setCmd((int)game_project::DBCommand::DEBUG);
+    req->setCmd((int)game_project::Command::TICK);
     auto rt = conn->request(req, 100);
     SYLAR_LOG_INFO(g_logger)
         << "[result=" << rt->result

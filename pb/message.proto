@@ -1,5 +1,5 @@
 syntax = "proto2";
-package sylar.ns;
+package game_project.log;
 
 message Info {
     required int32 level = 1;

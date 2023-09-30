@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../game_project/db_server/db_protocol.h
+../game_project/protocol_def/protocol.h
 
 ../sylar/sylar/address.h
 memory
@@ -321,8 +321,8 @@ zookeeper/zookeeper.h
 /root/cty/game_project/tests/test_dbserver.cc
 bits/stdc++.h
 /root/cty/game_project/tests/bits/stdc++.h
-game_project/db_server/db_protocol.h
-/root/cty/game_project/tests/game_project/db_server/db_protocol.h
+protocol_def/protocol.h
+/root/cty/game_project/tests/protocol_def/protocol.h
 sylar/iomanager.h
 /root/cty/game_project/tests/sylar/iomanager.h
 sylar/log.h

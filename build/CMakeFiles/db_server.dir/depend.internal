@@ -3,6 +3,8 @@
 
 CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o
  ../game_project/define.h
+ ../game_project/orm/message_info.h
+ ../game_project/pb/message.pb.h
  ../sylar/sylar/address.h
  ../sylar/sylar/bytearray.h
  ../sylar/sylar/db/db.h
@@ -69,6 +71,7 @@ CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o
  /root/cty/game_project/game_project/db_server/db_manager.h
  /root/cty/game_project/game_project/db_server/db_moudle.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o
+ ../game_project/protocol_def/protocol.h
  ../sylar/sylar/address.h
  ../sylar/sylar/application.h
  ../sylar/sylar/bytearray.h
@@ -109,4 +112,6 @@ CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o
  /root/cty/game_project/game_project/db_server/db_manager.h
  /root/cty/game_project/game_project/db_server/db_module.cc
  /root/cty/game_project/game_project/db_server/db_moudle.h
- /root/cty/game_project/game_project/db_server/db_protocol.h
+CMakeFiles/db_server.dir/game_project/pb/message.pb.cc.o
+ /root/cty/game_project/game_project/pb/message.pb.cc
+ /root/cty/game_project/game_project/pb/message.pb.h
