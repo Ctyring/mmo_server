@@ -38,6 +38,7 @@ set(LIB_SRC
 set(LIB_DB
     game_project/db_server/db_manager.cc
     game_project/db_server/db_module.cc
+    game_project/db_server/db_handler.cc
 )
 
 #PROTOBUF_GENERATE_CPP(PB_SRCS PB_HDRS sylar/test.proto)

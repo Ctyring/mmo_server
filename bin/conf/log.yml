@@ -11,3 +11,9 @@ logs:
           - type: FileLogAppender
             file: /apps/logs/project_name/system.log
           - type: StdoutLogAppender
+    - name: db
+    - level: info
+      appenders:
+          - type: FileLogAppender
+            file: /apps/logs/project_name/db.log
+          - type: StdoutLogAppender

@@ -35,11 +35,16 @@ CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o: ../game_project
 CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o: ../game_project/db_server/db_moudle.h
 
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/address.h
+CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/application.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/bytearray.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/config.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/db/db.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/db/mysql.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/fiber.h
+CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/http/http.h
+CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/http/http_server.h
+CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/http/http_session.h
+CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/http/servlet.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/iomanager.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/log.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/module.h
@@ -47,6 +52,7 @@ CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/m
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/noncopyable.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/protocol.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/rock/rock_protocol.h
+CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/rock/rock_server.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/rock/rock_stream.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/scheduler.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/singleton.h
@@ -56,6 +62,7 @@ CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/s
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/streams/load_balance.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/streams/service_discovery.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/streams/socket_stream.h
+CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/tcp_server.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/thread.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/timer.h
 CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o: ../sylar/sylar/util.h
