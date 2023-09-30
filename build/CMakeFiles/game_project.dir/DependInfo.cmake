@@ -10,17 +10,21 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
+  "DBUG_OFF"
   "game_project_EXPORTS"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/mysql"
   "../."
   "/apps/sylar/include"
   "../sylar"
   "../sylar/thirdpart"
   "../sylar/thirdpart/yaml-cpp/include"
   "../sylar/thirdpart/jsoncpp-1.8.4/include"
+  "../game_project"
+  "../sylar/bin"
   )
 
 # Targets to which this target links.

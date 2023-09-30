@@ -1,5 +1,7 @@
+#include "db_handler.h"
 #include "db_manager.h"
 #include "db_moudle.h"
+#include "db_protocol.h"
 #include "sylar/application.h"
 #include "sylar/config.h"
 #include "sylar/log.h"
@@ -14,6 +16,14 @@ DBModule::DBModule() : sylar::RockModule("db_module", "1.0", "") {}
 bool DBModule::handleRockRequest(sylar::RockRequest::ptr request,
                                  sylar::RockResponse::ptr response,
                                  sylar::RockStream::ptr stream) {
+    switch (request->getCmd()) {
+        case (int)DBCommand::DEBUG:
+            return DBHandler::CheckStatus();
+        default:
+            SYLAR_LOG_WARN(g_logger)
+                << "invalid cmd=0x" << std::hex << request->getCmd();
+            break;
+    }
     return true;
 }
 
@@ -24,7 +34,6 @@ bool DBModule::handleRockNotify(sylar::RockNotify::ptr notify,
 
 bool DBModule::onLoad() {
     SYLAR_LOG_INFO(g_logger) << "onLoad";
-    DBMgr::GetInstance()->init();
     return true;
 }
 

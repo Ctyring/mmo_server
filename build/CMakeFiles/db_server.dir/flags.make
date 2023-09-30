@@ -4,11 +4,13 @@
 # compile CXX with /opt/rh/devtoolset-9/root/usr/bin/g++
 CXX_FLAGS =  -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC  
 
-CXX_DEFINES = -Ddb_server_EXPORTS
+CXX_DEFINES = -DDBUG_OFF -Ddb_server_EXPORTS
 
-CXX_INCLUDES = -I/root/cty/game_project/. -I/apps/sylar/include -I/root/cty/game_project/sylar -I/root/cty/game_project/sylar/thirdpart -I/root/cty/game_project/sylar/thirdpart/yaml-cpp/include -I/root/cty/game_project/sylar/thirdpart/jsoncpp-1.8.4/include 
+CXX_INCLUDES = -I/usr/include/mysql -I/root/cty/game_project/. -I/apps/sylar/include -I/root/cty/game_project/sylar -I/root/cty/game_project/sylar/thirdpart -I/root/cty/game_project/sylar/thirdpart/yaml-cpp/include -I/root/cty/game_project/sylar/thirdpart/jsoncpp-1.8.4/include -I/root/cty/game_project/game_project -I/root/cty/game_project/sylar/bin 
 
 # Custom defines: CMakeFiles/db_server.dir/game_project/db_server/db_manager.cc.o_DEFINES = __FILE__="game_project/db_server/db_manager.cc"
 
 # Custom defines: CMakeFiles/db_server.dir/game_project/db_server/db_module.cc.o_DEFINES = __FILE__="game_project/db_server/db_module.cc"
+
+# Custom defines: CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o_DEFINES = __FILE__="game_project/db_server/db_handler.cc"
 

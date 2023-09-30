@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named game_project
+
+# Build rule for target.
+game_project: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_project
+.PHONY : game_project
+
+# fast build rule for target.
+game_project/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/build
+.PHONY : game_project/fast
+
+#=============================================================================
 # Target rules for targets named db_server
 
 # Build rule for target.
@@ -130,17 +143,17 @@ db_server/fast:
 .PHONY : db_server/fast
 
 #=============================================================================
-# Target rules for targets named game_project
+# Target rules for targets named test_dbserver
 
 # Build rule for target.
-game_project: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_project
-.PHONY : game_project
+test_dbserver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_dbserver
+.PHONY : test_dbserver
 
 # fast build rule for target.
-game_project/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/build
-.PHONY : game_project/fast
+test_dbserver/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_dbserver.dir/build.make CMakeFiles/test_dbserver.dir/build
+.PHONY : test_dbserver/fast
 
 #=============================================================================
 # Target rules for targets named bin_sylar
@@ -376,6 +389,33 @@ test_email/fast:
 	$(MAKE) $(MAKESILENT) -f sylar/CMakeFiles/test_email.dir/build.make sylar/CMakeFiles/test_email.dir/build
 .PHONY : test_email/fast
 
+game_project/db_server/db_handler.o: game_project/db_server/db_handler.cc.o
+
+.PHONY : game_project/db_server/db_handler.o
+
+# target to build an object file
+game_project/db_server/db_handler.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.o
+.PHONY : game_project/db_server/db_handler.cc.o
+
+game_project/db_server/db_handler.i: game_project/db_server/db_handler.cc.i
+
+.PHONY : game_project/db_server/db_handler.i
+
+# target to preprocess a source file
+game_project/db_server/db_handler.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.i
+.PHONY : game_project/db_server/db_handler.cc.i
+
+game_project/db_server/db_handler.s: game_project/db_server/db_handler.cc.s
+
+.PHONY : game_project/db_server/db_handler.s
+
+# target to generate assembly for a file
+game_project/db_server/db_handler.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/game_project/db_server/db_handler.cc.s
+.PHONY : game_project/db_server/db_handler.cc.s
+
 game_project/db_server/db_manager.o: game_project/db_server/db_manager.cc.o
 
 .PHONY : game_project/db_server/db_manager.o
@@ -457,6 +497,33 @@ game_project/my_module.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_project.dir/build.make CMakeFiles/game_project.dir/game_project/my_module.cc.s
 .PHONY : game_project/my_module.cc.s
 
+tests/test_dbserver.o: tests/test_dbserver.cc.o
+
+.PHONY : tests/test_dbserver.o
+
+# target to build an object file
+tests/test_dbserver.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_dbserver.dir/build.make CMakeFiles/test_dbserver.dir/tests/test_dbserver.cc.o
+.PHONY : tests/test_dbserver.cc.o
+
+tests/test_dbserver.i: tests/test_dbserver.cc.i
+
+.PHONY : tests/test_dbserver.i
+
+# target to preprocess a source file
+tests/test_dbserver.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_dbserver.dir/build.make CMakeFiles/test_dbserver.dir/tests/test_dbserver.cc.i
+.PHONY : tests/test_dbserver.cc.i
+
+tests/test_dbserver.s: tests/test_dbserver.cc.s
+
+.PHONY : tests/test_dbserver.s
+
+# target to generate assembly for a file
+tests/test_dbserver.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_dbserver.dir/build.make CMakeFiles/test_dbserver.dir/tests/test_dbserver.cc.s
+.PHONY : tests/test_dbserver.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -464,9 +531,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... db_server"
 	@echo "... game_project"
+	@echo "... db_server"
+	@echo "... test_dbserver"
+	@echo "... edit_cache"
 	@echo "... bin_sylar"
 	@echo "... orm"
 	@echo "... test_mysql"
@@ -485,6 +553,9 @@ help:
 	@echo "... test_bitmap"
 	@echo "... test_rock"
 	@echo "... test_email"
+	@echo "... game_project/db_server/db_handler.o"
+	@echo "... game_project/db_server/db_handler.i"
+	@echo "... game_project/db_server/db_handler.s"
 	@echo "... game_project/db_server/db_manager.o"
 	@echo "... game_project/db_server/db_manager.i"
 	@echo "... game_project/db_server/db_manager.s"
@@ -494,6 +565,9 @@ help:
 	@echo "... game_project/my_module.o"
 	@echo "... game_project/my_module.i"
 	@echo "... game_project/my_module.s"
+	@echo "... tests/test_dbserver.o"
+	@echo "... tests/test_dbserver.i"
+	@echo "... tests/test_dbserver.s"
 .PHONY : help
 
 

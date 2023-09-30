@@ -13,7 +13,7 @@ sylar::ConfigVar<std::string>::ptr g_mysql_passwd =
 sylar::ConfigVar<std::string>::ptr g_mysql_db =
     sylar::Config::Lookup("mysql.db", std::string("game_project"), "mysql db");
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("db");
 
 DBManager::DBManager() {}
 

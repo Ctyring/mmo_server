@@ -4,9 +4,9 @@
 # compile CXX with /opt/rh/devtoolset-9/root/usr/bin/g++
 CXX_FLAGS =  -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC  
 
-CXX_DEFINES = -Dgame_project_EXPORTS
+CXX_DEFINES = -DDBUG_OFF -Dgame_project_EXPORTS
 
-CXX_INCLUDES = -I/root/cty/game_project/. -I/apps/sylar/include -I/root/cty/game_project/sylar -I/root/cty/game_project/sylar/thirdpart -I/root/cty/game_project/sylar/thirdpart/yaml-cpp/include -I/root/cty/game_project/sylar/thirdpart/jsoncpp-1.8.4/include 
+CXX_INCLUDES = -I/usr/include/mysql -I/root/cty/game_project/. -I/apps/sylar/include -I/root/cty/game_project/sylar -I/root/cty/game_project/sylar/thirdpart -I/root/cty/game_project/sylar/thirdpart/yaml-cpp/include -I/root/cty/game_project/sylar/thirdpart/jsoncpp-1.8.4/include -I/root/cty/game_project/game_project -I/root/cty/game_project/sylar/bin 
 
 # Custom defines: CMakeFiles/game_project.dir/game_project/my_module.cc.o_DEFINES = __FILE__="game_project/my_module.cc"
 

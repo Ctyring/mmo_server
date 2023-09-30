@@ -61,8 +61,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/db_server.dir/DependInfo.cmake"
   "CMakeFiles/game_project.dir/DependInfo.cmake"
+  "CMakeFiles/db_server.dir/DependInfo.cmake"
+  "CMakeFiles/test_dbserver.dir/DependInfo.cmake"
   "sylar/CMakeFiles/bin_sylar.dir/DependInfo.cmake"
   "sylar/CMakeFiles/orm.dir/DependInfo.cmake"
   "sylar/CMakeFiles/test_mysql.dir/DependInfo.cmake"
