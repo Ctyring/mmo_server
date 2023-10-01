@@ -1,1 +1,0 @@
-/opt/rh/devtoolset-9/root/usr/bin/g++ -fPIC  -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined  -shared -Wl,-soname,libgame_project.so -o ../lib/libgame_project.so CMakeFiles/game_project.dir/game_project/my_module.cc.o CMakeFiles/game_project.dir/game_project/pb/message.pb.cc.o   -L/usr/lib64/mysql  -L/apps/sylar/lib 

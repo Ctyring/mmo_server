@@ -35,6 +35,9 @@ bool DBHandler::SaveMessage(sylar::RockRequest::ptr request,
             << color::red << "DBServer: insert message failed";
         return false;
     }
+
+    SYLAR_LOG_ERROR(g_logger)
+        << color::pink << "DBServer: insert message failed";
     return true;
 }
 }  // namespace game_project

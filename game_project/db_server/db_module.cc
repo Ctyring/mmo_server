@@ -17,6 +17,7 @@ DBModule::DBModule() : sylar::RockModule("db_module", "1.0", "") {}
 bool DBModule::handleRockRequest(sylar::RockRequest::ptr request,
                                  sylar::RockResponse::ptr response,
                                  sylar::RockStream::ptr stream) {
+    SYLAR_LOG_DEBUG(g_logger) << "handleRockRequest" << request->toString();
     switch (request->getCmd()) {
         case (int)Command::TICK:
             return DBHandlerMgr::GetInstance()->CheckStatus();

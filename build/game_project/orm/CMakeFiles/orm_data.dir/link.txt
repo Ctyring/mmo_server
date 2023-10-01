@@ -1,2 +1,0 @@
-/opt/rh/devtoolset-9/root/usr/bin/ar qc liborm_data.a  CMakeFiles/orm_data.dir/message_info.cc.o
-/opt/rh/devtoolset-9/root/usr/bin/ranlib liborm_data.a

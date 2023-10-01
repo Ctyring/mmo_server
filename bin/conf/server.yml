@@ -1,5 +1,5 @@
 servers:
-    - address: ["0.0.0.0:8062"]
+    - address: ["127.0.0.1:8062"]
       timeout: 1000
       name: sylar-rock/1.0
       accept_worker: accept

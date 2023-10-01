@@ -15,16 +15,17 @@ LogModule::LogModule() : sylar::RockModule("log_module", "1.0", "") {}
 bool LogModule::handleRockRequest(sylar::RockRequest::ptr request,
                                   sylar::RockResponse::ptr response,
                                   sylar::RockStream::ptr stream) {
-    switch (request->getCmd()) {
-        case (int)Command::LOG_MESSAGE:
-            return LogHandlerMgr::GetInstance()->HandleMessage(
-                request, response, stream);
-        default:
-            SYLAR_LOG_WARN(g_logger)
-                << "invalid cmd=0x" << std::hex << request->getCmd();
-            break;
-    }
-    return true;
+    SYLAR_LOG_DEBUG(g_logger) << "handleRockRequest" << request->toString();
+    // switch (request->getCmd()) {
+    //     case (int)Command::LOG_MESSAGE:
+    //         return LogHandlerMgr::GetInstance()->HandleMessage(
+    //             request, response, stream);
+    //     default:
+    //         SYLAR_LOG_WARN(g_logger)
+    //             << "invalid cmd=0x" << std::hex << request->getCmd();
+    //         break;
+    // }
+    return false;
 }
 
 bool LogModule::handleRockNotify(sylar::RockNotify::ptr notify,
@@ -33,7 +34,7 @@ bool LogModule::handleRockNotify(sylar::RockNotify::ptr notify,
 }
 
 bool LogModule::onLoad() {
-    // SYLAR_LOG_INFO(g_logger) << "onLoad";
+    SYLAR_LOG_INFO(g_logger) << "onLoad";
     LogHandlerMgr::GetInstance()->init();
     return true;
 }
